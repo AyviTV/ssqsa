@@ -124,8 +124,10 @@ const ServersPage: React.FC = () => {
                 Clear filters
               </button>
             </div>
-          )}
-          )}
+          )}       
+        </motion.div>
+      </div>
+    </div>
   );
 };
 
