@@ -12,7 +12,6 @@ const HomePage: React.FC = () => {
   const { playlist, playSong } = useMusic();
   const rankedServers = getRankedServers();
 
-  // Auto play music when page loads
   useEffect(() => {
     if (playlist.length > 0) {
       playSong(playlist[0]);
@@ -21,14 +20,11 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#0F0518] text-white">
-      {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
-        {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/7130497/pexels-photo-7130497.jpeg?auto=compress&cs=tinysrgb&w=1280')] bg-cover bg-center opacity-20"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0F0518]/90 via-[#1A0F2E]/90 to-[#2D1B4E]/90"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg')] bg-cover bg-center opacity-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/90 via-purple-900/90 to-[#2D1B4E]/90 backdrop-blur-sm"></div>
           
-          {/* Animated gradient circles */}
           <motion.div 
             className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-purple-600/20 filter blur-3xl"
             animate={{ 
@@ -43,7 +39,7 @@ const HomePage: React.FC = () => {
           ></motion.div>
           
           <motion.div 
-            className="absolute bottom-1/3 right-1/4 w-64 h-64 rounded-full bg-blue-600/20 filter blur-3xl"
+            className="absolute bottom-1/3 right-1/4 w-64 h-64 rounded-full bg-indigo-600/20 filter blur-3xl"
             animate={{ 
               x: [0, -20, 0],
               y: [0, 20, 0],
@@ -96,7 +92,6 @@ const HomePage: React.FC = () => {
           </motion.div>
         </div>
         
-        {/* Scroll Indicator */}
         <motion.div 
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
@@ -110,7 +105,6 @@ const HomePage: React.FC = () => {
         </motion.div>
       </section>
 
-      {/* Server Ranking Section */}
       <section className="py-20 bg-[#1A0F2E]">
         <div className="container mx-auto px-4">
           <motion.div
@@ -125,7 +119,6 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="py-20 bg-[#1A0F2E]">
         <div className="container mx-auto px-4">
           <motion.div
@@ -171,7 +164,6 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-[#0F0518]">
         <div className="container mx-auto px-4">
           <motion.div
